@@ -91,6 +91,10 @@ class Client extends BaseClient
     {
         return $this->requestVerify('mchorders/onlinepay', $params);
     }
+    public function microPay(array $params)
+    {
+        return $this->requestVerify('mchorders/pay', $params);
+    }
 
     /**
      * @param array $params
@@ -134,5 +138,10 @@ class Client extends BaseClient
     public function wxQrCode(array $params)
     {
         return $this->requestVerify('mchorders/wxqrcode', $params);
+    }
+
+    public function statementurl(array $params)
+    {
+        return $this->requestVerify('mchorders/statementurl', $params);
     }
 }
